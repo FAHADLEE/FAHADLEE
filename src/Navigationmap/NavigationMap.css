@@ -1,0 +1,42 @@
+.custom-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.search-bar-container {
+    position: relative;
+}
+
+.search-input-field {
+    /* position: absolute; */
+    top: 0;
+    /* background-color: rgb(0, 157, 255)0, 200, 255; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 0px;
+    z-index: 1000;
+}
+.details-popup{
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.search-input-field input {
+    width: 700px;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+/* Add any additional styles as needed */

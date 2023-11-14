@@ -1,0 +1,19 @@
+.custom-popup {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    width: 200px;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+/* Add any additional styles as needed */
