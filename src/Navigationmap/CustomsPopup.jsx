@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CustomsPopup.css';
 
 const CustomPopup = ({ formData, onClose, onSubmit, onChange }) => {
+  const [localFormData, setLocalFormData] = useState(formData);
+
+  const handleInputChange = (field, value) => {
+    setLocalFormData((prevFormData) => ({
+      ...prevFormData,
+      [field]: value,
+    }));
+    onChange(field, value);
+  };
+
   return (
     <div className="custom-popup">
       <div className="popup-content">
@@ -10,25 +20,25 @@ const CustomPopup = ({ formData, onClose, onSubmit, onChange }) => {
           <label>
             Day:
             <input
-              type="text"
-              value={formData.day}
-              onChange={(e) => onChange('day', e.target.value)}
+              type="date"
+              value={localFormData.day}
+              onChange={(e) => handleInputChange('day', e.target.value)}
               required
             />
           </label>
           <label>
             Daytime:
             <input
-              type="text"
-              value={formData.daytime}
-              onChange={(e) => onChange('daytime', e.target.value)}
+              type="time"
+              value={localFormData.daytime}
+              onChange={(e) => handleInputChange('daytime', e.target.value)}
             />
           </label>
           <label>
             Type:
             <select
-              value={formData.Type}
-              onChange={(e) => onChange('Type', e.target.value)}
+              value={localFormData.Type}
+              onChange={(e) => handleInputChange('Type', e.target.value)}
             >
               <option value="start">Start</option>
               <option value="end">End</option>
